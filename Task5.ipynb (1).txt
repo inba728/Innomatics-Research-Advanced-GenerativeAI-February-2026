@@ -1,0 +1,410 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HdVyQ4TB6XVm",
+        "outputId": "cb575f29-677c-4f11-a750-14a2d26c8a79"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total Likes: 1050\n",
+            "Post Status: Viral Post\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "# Problem 1: Social Media – Post Engagement Analyzer\n",
+        "def analyze_engagement(likes):\n",
+        "    total = 0\n",
+        "\n",
+        "    for like in likes:\n",
+        "        total += like\n",
+        "\n",
+        "    if total >= 1000:\n",
+        "        status = \"Viral Post\"\n",
+        "    else:\n",
+        "        status = \"Normal Engagement\"\n",
+        "\n",
+        "    print(\"Total Likes:\", total)\n",
+        "    print(\"Post Status:\", status)\n",
+        "\n",
+        "likes = [200, 300, 150, 400]\n",
+        "\n",
+        "analyze_engagement(likes)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Problem 2: Healthcare – Medicine Stock Alert System\n",
+        "def check_medicine_stock(stock):\n",
+        "    print(\"Medicine Stock:\", stock)\n",
+        "\n",
+        "    if stock < 10:\n",
+        "        print(\"Status: Low Stock Alert\")\n",
+        "    else:\n",
+        "        print(\"Status: Stock Sufficient\")\n",
+        "\n",
+        "stock = 6\n",
+        "\n",
+        "check_medicine_stock(stock)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EoGJIgeD6rRf",
+        "outputId": "61439525-472f-4c98-f864-aabe2f7e5867"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Medicine Stock: 6\n",
+            "Status: Low Stock Alert\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Problem 3: Agriculture – Rainfall Adequacy Checker\n",
+        "def check_rainfall(rainfall, required_level):\n",
+        "    total = 0\n",
+        "\n",
+        "    for value in rainfall:\n",
+        "        total += value\n",
+        "\n",
+        "    average = total / len(rainfall)\n",
+        "\n",
+        "    if average >= required_level:\n",
+        "        status = \"Adequate Rainfall\"\n",
+        "    else:\n",
+        "        status = \"Inadequate Rainfall\"\n",
+        "\n",
+        "    print(\"Average Rainfall:\", int(average))\n",
+        "    print(\"Rainfall Status:\", status)\n",
+        "\n",
+        "rainfall = [70, 75, 80, 65, 70]\n",
+        "required_level = 70\n",
+        "\n",
+        "check_rainfall(rainfall, required_level)"
+      ],
+      "metadata": {
+        "id": "1rroBt9iAgiB",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5c906609-ba58-402a-d52b-ad9d4cf8c400"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Average Rainfall: 72\n",
+            "Rainfall Status: Adequate Rainfall\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#Problem 4: Social Media – Duplicate Account Detection\n",
+        "def detect_duplicate_accounts(usernames):\n",
+        "    unique = set(usernames)\n",
+        "\n",
+        "    if len(unique) != len(usernames):\n",
+        "        print(\"Duplicate Accounts Found: Yes\")\n",
+        "    else:\n",
+        "        print(\"Duplicate Accounts Found: No\")\n",
+        "\n",
+        "usernames = [\"user1\", \"user2\", \"user3\", \"user1\"]\n",
+        "\n",
+        "detect_duplicate_accounts(usernames)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3AjlsfDHBGmr",
+        "outputId": "09d02e5e-b033-4533-eb59-10f5bd4d7a61"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Duplicate Accounts Found: Yes\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Problem 5: Healthcare – Appointment Eligibility Checker\n",
+        "def check_appointment(age):\n",
+        "    print(\"Patient Age:\", age)\n",
+        "\n",
+        "    if age >= 18:\n",
+        "        print(\"Eligibility Status: Eligible\")\n",
+        "    else:\n",
+        "        print(\"Eligibility Status: Not Eligible\")\n",
+        "\n",
+        "age = 21\n",
+        "\n",
+        "check_appointment(age)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oDhot5tHBUWo",
+        "outputId": "7aa0a25a-a585-4932-d3aa-69e4de4fe83e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Patient Age: 21\n",
+            "Eligibility Status: Eligible\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Problem 6: Agriculture – Premium Crop Price Filter\n",
+        "def filter_premium_crops(prices):\n",
+        "    premium = []\n",
+        "\n",
+        "    for price in prices:\n",
+        "        if price > 2000:\n",
+        "            premium.append(price)\n",
+        "\n",
+        "    print(\"Premium Crops:\", premium)\n",
+        "\n",
+        "prices = [1500, 2500, 1800, 3200]\n",
+        "\n",
+        "filter_premium_crops(prices)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M75t1oVnBfgu",
+        "outputId": "b040c352-806d-47e5-b4ba-415495b2840b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Premium Crops: [2500, 3200]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Problem 7: System Monitoring – Application Health checker\n",
+        "def check_application_health(errors):\n",
+        "    print(\"Error Count:\", errors)\n",
+        "\n",
+        "    if errors == 0:\n",
+        "        print(\"System Status: Healthy\")\n",
+        "    elif errors <= 5:\n",
+        "        print(\"System Status: Minor Issues\")\n",
+        "    else:\n",
+        "        print(\"System Status: Critical Issues\")\n",
+        "\n",
+        "errors = 7\n",
+        "\n",
+        "check_application_health(errors)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sT7yFK41BsL7",
+        "outputId": "f890598d-6b1e-4c47-8ec4-17398cf35510"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Error Count: 7\n",
+            "System Status: Critical Issues\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 8: Banking – Daily Transaction Limit Checker\n",
+        "def check_transaction(amount):\n",
+        "    print(\"Transaction Amount:\", amount)\n",
+        "\n",
+        "    if amount <= 50000:\n",
+        "        print(\"Transaction Status: Approved\")\n",
+        "    else:\n",
+        "        print(\"Transaction Status: Rejected\")\n",
+        "\n",
+        "amount = 60000\n",
+        "\n",
+        "check_transaction(amount)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tR8vXaEoB5N_",
+        "outputId": "9e624754-cd09-458a-aeb8-e001a2008728"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Transaction Amount: 60000\n",
+            "Transaction Status: Rejected\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 9: E-Learning – Student Attendance Eligibility System\n",
+        "def check_exam_eligibility(attendance):\n",
+        "    present = 0\n",
+        "\n",
+        "    for day in attendance:\n",
+        "        if day == \"P\":\n",
+        "            present += 1\n",
+        "\n",
+        "    percentage = (present / len(attendance)) * 100\n",
+        "\n",
+        "    if percentage >= 75:\n",
+        "        status = \"Eligible\"\n",
+        "    else:\n",
+        "        status = \"Not Eligible\"\n",
+        "\n",
+        "    print(\"Attendance Percentage:\", percentage)\n",
+        "    print(\"Exam Eligibility:\", status)\n",
+        "\n",
+        "attendance = [\"P\", \"P\", \"A\", \"P\", \"P\"]\n",
+        "\n",
+        "check_exam_eligibility(attendance)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3E-Lsg1iCD1G",
+        "outputId": "02bf9466-941c-42f8-cb03-fb3806809c7d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Attendance Percentage: 80.0\n",
+            "Exam Eligibility: Eligible\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# Problem 10: Smart Electricity Bill Analyzer\n",
+        "def calculate_electricity_bill(units):\n",
+        "    if units <= 100:\n",
+        "        bill = units * 3\n",
+        "    elif units <= 200:\n",
+        "        bill = (100 * 3) + ((units - 100) * 5)\n",
+        "    else:\n",
+        "        bill = (100 * 3) + (100 * 5) + ((units - 200) * 7)\n",
+        "\n",
+        "    if bill < 500:\n",
+        "        usage = \"Low Usage\"\n",
+        "    elif bill <= 1500:\n",
+        "        usage = \"Moderate Usage\"\n",
+        "    else:\n",
+        "        usage = \"High Usage\"\n",
+        "\n",
+        "    return bill, usage\n",
+        "\n",
+        "units_consumed = 250\n",
+        "bill, usage_status = calculate_electricity_bill(units_consumed)\n",
+        "\n",
+        "print(\"Total Bill:\", bill)\n",
+        "print(\"Usage Classification:\", usage_status)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QYkag5MaCNlc",
+        "outputId": "8758ee04-5730-4b13-a1ef-7e0edb728a61"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total Bill: 1150\n",
+            "Usage Classification: Moderate Usage\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
